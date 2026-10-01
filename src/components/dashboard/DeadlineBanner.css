@@ -1,0 +1,139 @@
+.deadline-banner {
+  border-radius: var(--radius-xl);
+  padding: var(--space-5) var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.deadline-banner.is-upcoming {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(217, 119, 6, 0.05) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.deadline-banner.is-overdue {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.14) 0%, rgba(220, 38, 38, 0.06) 100%);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+}
+
+.deadline-banner-all-clear {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(5, 150, 105, 0.05) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.deadline-banner-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex: 1;
+}
+
+.deadline-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.is-upcoming .deadline-icon-wrap {
+  background-color: var(--warning-bg);
+  color: var(--warning-500);
+}
+
+.is-overdue .deadline-icon-wrap {
+  background-color: var(--danger-bg);
+  color: var(--danger-500);
+}
+
+.all-clear-icon {
+  background-color: var(--success-bg);
+  color: var(--success-500);
+}
+
+.deadline-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.deadline-badge-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.deadline-kicker {
+  font-size: 0.725rem;
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.is-upcoming .deadline-kicker {
+  color: var(--warning-500);
+}
+
+.is-overdue .deadline-kicker {
+  color: var(--danger-500);
+}
+
+.deadline-assignment-title {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  line-height: 1.3;
+}
+
+.deadline-subject-tag {
+  color: var(--primary);
+}
+
+.deadline-separator {
+  color: var(--text-subtle);
+}
+
+.deadline-subtext {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.deadline-heading {
+  font-size: var(--text-base);
+  font-weight: var(--font-bold);
+  color: var(--success-text);
+}
+
+.deadline-assignment-text {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.deadline-banner-right {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .deadline-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .deadline-banner-right {
+    width: 100%;
+  }
+
+  .deadline-banner-right button {
+    width: 100%;
+  }
+}

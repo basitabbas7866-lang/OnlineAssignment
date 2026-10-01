@@ -1,0 +1,62 @@
+.delete-confirm-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-2) var(--space-2);
+}
+
+.delete-confirm-icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  background-color: var(--danger-bg);
+  border: 1px solid var(--danger-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+}
+
+.delete-confirm-title {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--text-main);
+  margin-bottom: var(--space-2);
+}
+
+.delete-confirm-text {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.delete-assignment-name-badge {
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  color: var(--text-main);
+  background-color: var(--bg-surface-subtle);
+  border: 1px solid var(--border-default);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  margin: var(--space-3) 0 var(--space-2) 0;
+  max-width: 100%;
+  word-break: break-word;
+}
+
+.delete-confirm-subtext {
+  font-size: var(--text-xs);
+  color: var(--danger-500);
+  margin-bottom: var(--space-6);
+}
+
+.delete-confirm-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  width: 100%;
+}
+
+.delete-confirm-actions button {
+  flex: 1;
+}

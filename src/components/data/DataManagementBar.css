@@ -1,0 +1,99 @@
+.data-management-bar {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  position: relative;
+}
+
+.data-bar-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.data-bar-title {
+  font-size: var(--text-xs);
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-subtle);
+}
+
+.data-bar-autosave-tag {
+  font-size: var(--text-xs);
+  color: var(--success-500);
+  background-color: var(--success-bg);
+  border: 1px solid var(--success-border);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: var(--font-semibold);
+}
+
+.autosave-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background-color: var(--success-500);
+  animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.data-bar-buttons {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.data-feedback-pill {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-md);
+  font-size: var(--text-xs);
+  font-weight: var(--font-medium);
+  animation: fadeIn var(--transition-fast) ease-out;
+}
+
+.feedback-success {
+  background-color: var(--success-bg);
+  color: var(--success-text);
+  border: 1px solid var(--success-border);
+}
+
+.feedback-error {
+  background-color: var(--danger-bg);
+  color: var(--danger-text);
+  border: 1px solid var(--danger-border);
+}
+
+@media (max-width: 768px) {
+  .data-management-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .data-bar-buttons {
+    width: 100%;
+  }
+
+  .data-bar-buttons button {
+    flex: 1;
+    min-width: 110px;
+  }
+}

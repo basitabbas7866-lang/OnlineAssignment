@@ -1,0 +1,17 @@
+.kanban-board-container {
+  width: 100%;
+  animation: fadeIn var(--transition-base) ease-out;
+}
+
+.kanban-board-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  align-items: flex-start;
+}
+
+@media (max-width: 960px) {
+  .kanban-board-grid {
+    grid-template-columns: 1fr;
+  }
+}

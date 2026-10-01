@@ -1,0 +1,27 @@
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--bg-app);
+}
+
+.app-main-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* Prevents overflow issues with flex children */
+}
+
+.app-main-content {
+  flex: 1;
+  padding: var(--space-8);
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .app-main-content {
+    padding: var(--space-4);
+  }
+}

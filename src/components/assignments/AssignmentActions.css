@@ -1,0 +1,10 @@
+.assignment-actions-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.action-btn-danger:hover {
+  color: var(--danger-500) !important;
+  background-color: var(--danger-bg) !important;
+}
